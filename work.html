@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work | Elementary Educator</title>
+    <meta name="description" content="Lesson plans, worksheets, curriculum guides, and speaking—resources created by a teacher who gets it." />
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+
+  <body>
+    <!-- Top Nav -->
+    <header class="topbar">
+      <div class="container nav">
+        <a class="brand" href="index.html" aria-label="Elementary Educator Home">
+          <span class="brand-emoji" aria-hidden="true">🍎</span>
+          <span class="brand-text">Elementary Educator</span>
+        </a>
+
+        <nav class="navlinks" id="navLinks" aria-label="Primary">
+          <a class="pill" href="index.html">Home</a>
+          <a class="pill" href="app.html">App</a>
+          <a class="pill" href="youtube.html">YouTube</a>
+          <a class="pill active" href="work.html">Work</a>
+          <a class="pill" href="index.html#about">About</a>
+          <a class="pill" href="index.html#contact">Contact</a>
+        </nav>
+
+        <div class="nav-cta">
+          <a class="btn btn-ghost" href="app.html#download">Get the App</a>
+          <button class="hamburger" aria-label="Open menu" onclick="toggleMenu()">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="work-hero">
+        <div class="container work-hero-inner">
+          <h1 class="work-title">Resources &amp; Portfolio</h1>
+          <p class="work-sub">
+            Lesson plans, worksheets, curriculum guides, and more — created by a teacher who gets it.
+          </p>
+
+          <div class="work-filter-row" role="tablist" aria-label="Work filters">
+            <button class="filter-pill active" type="button" data-filter="all">All</button>
+            <button class="filter-pill" type="button" data-filter="Lesson Plans">Lesson Plans</button>
+            <button class="filter-pill" type="button" data-filter="Worksheets">Worksheets</button>
+            <button class="filter-pill" type="button" data-filter="Curriculum">Curriculum</button>
+            <button class="filter-pill" type="button" data-filter="Speaking">Speaking</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cards -->
+      <section class="work-grid-section">
+        <div class="container">
+          <div class="work-grid" id="workGrid">
+            <!-- Card 1 -->
+            <article class="work-card" data-category="Curriculum">
+              <div class="work-media">
+                <div class="work-icon" aria-hidden="true">📄</div>
+              </div>
+              <div class="work-body">
+                <div class="tag">Curriculum</div>
+                <h3>Guided Reading Curriculum Guide</h3>
+                <p>Complete curriculum guide with pacing, routines, and student-facing resources.</p>
+                <a class="btn btn-primary wide" href="#" download>Download</a>
+              </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="work-card" data-category="Worksheets">
+              <div class="work-media">
+                <div class="work-icon" aria-hidden="true">🧾</div>
+              </div>
+              <div class="work-body">
+                <div class="tag">Worksheets</div>
+                <h3>Phonics Practice Worksheets</h3>
+                <p>Printable phonics worksheets covering all major phonetic patterns.</p>
+                <a class="btn btn-primary wide" href="#" download>Download</a>
+              </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="work-card" data-category="Lesson Plans">
+              <div class="work-media">
+                <div class="work-icon" aria-hidden="true">📘</div>
+              </div>
+              <div class="work-body">
+                <div class="tag">Lesson Plans</div>
+                <h3>Weekly Lesson Plan Templates</h3>
+                <p>Editable templates to streamline your weekly planning process.</p>
+                <a class="btn btn-primary wide" href="#" download>Download</a>
+              </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="work-card" data-category="Speaking">
+              <div class="work-media">
+                <div class="work-icon" aria-hidden="true">🎤</div>
+              </div>
+              <div class="work-body">
+                <div class="tag">Speaking</div>
+                <h3>Keynote: Building Reading Culture</h3>
+                <p>Available for workshops and speaking engagements on literacy development.</p>
+                <a class="btn btn-outline wide" href="#">Learn More</a>
+              </div>
+            </article>
+
+            <!-- Add more cards by copying the <article> blocks above -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <div class="container footer-grid">
+          <div class="footer-col">
+            <div class="footer-brand">
+              <span class="brand-emoji" aria-hidden="true">🍎</span>
+              <span>Elementary Educator</span>
+            </div>
+            <p class="footer-tagline">Inspiring Young Minds, One Lesson at a Time</p>
+
+            <div class="socials" aria-label="Social links">
+              <a class="social" href="#" aria-label="YouTube">▶</a>
+              <a class="social" href="#" aria-label="Instagram">◎</a>
+              <a class="social" href="#" aria-label="Twitter / X">𝕏</a>
+              <a class="social" href="mailto:hello@your-email.com" aria-label="Email">✉</a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="app.html">The App</a>
+            <a href="youtube.html">YouTube</a>
+            <a href="work.html">Work</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Resources</h4>
+            <a href="index.html#about">About Me</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+          </div>
+
+          <div class="footer-col">
+            <h4>Get in Touch</h4>
+            <p class="footer-muted">Have questions or want to collaborate?</p>
+            <a class="email" href="mailto:hello@your-email.com">hello@your-email.com</a>
+          </div>
+        </div>
+
+        <div class="container footer-bottom">
+          <p>© <span id="year"></span> Elementary Educator</p>
+        </div>
+      </footer>
+    </main>
+
+    <script src="assets/script.js"></script>
+  </body>
+</html>
