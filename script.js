@@ -1,23 +1,29 @@
 function toggleMenu() {
-  const el = document.getElementById("navLinks");
-  el.classList.toggle("open");
+  const links = document.getElementById("navLinks");
+  links.classList.toggle("open");
 }
 
-function handleSubmit(e) {
+// Optional: visually mark active nav pill on click
+document.addEventListener("click", (e) => {
+  const a = e.target.closest(".pill");
+  if (!a) return;
+
+  document.querySelectorAll(".pill").forEach((p) => p.classList.remove("active"));
+  a.classList.add("active");
+
+  // close mobile menu after selection
+  const links = document.getElementById("navLinks");
+  links.classList.remove("open");
+});
+
+function newsletterSubmit(e) {
   e.preventDefault();
+  const email = e.target.email.value.trim();
 
-  const form = e.target;
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const message = form.message.value.trim();
-
-  // IMPORTANT: change this to your email address
-  const to = "you@example.com";
-
-  const subject = encodeURIComponent(`Message from ${name} (theelementaryteacher)`);
-  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-
-  window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+  // For now: no backend, just a confirmation.
+  // Later we can wire this to Mailchimp / ConvertKit / Buttondown, etc.
+  alert(`Subscribed: ${email}`);
+  e.target.reset();
 }
 
 document.getElementById("year").textContent = new Date().getFullYear();
