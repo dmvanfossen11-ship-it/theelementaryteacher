@@ -49,3 +49,26 @@ document.addEventListener("click", (e) => {
 // Footer year
 const y = document.getElementById("year");
 if (y) y.textContent = new Date().getFullYear();
+(function initWorkFilters() {
+  const grid = document.getElementById("workGrid");
+  const pills = document.querySelectorAll(".work-filter-row .filter-pill");
+  if (!grid || pills.length === 0) return;
+
+  const cards = Array.from(grid.querySelectorAll(".work-card"));
+
+  function applyFilter(value) {
+    cards.forEach((card) => {
+      const cat = card.getAttribute("data-category") || "";
+      const show = value === "all" || cat === value;
+      card.style.display = show ? "" : "none";
+    });
+  }
+
+  pills.forEach((p) => {
+    p.addEventListener("click", () => {
+      pills.forEach((x) => x.classList.remove("active"));
+      p.classList.add("active");
+      applyFilter(p.getAttribute("data-filter"));
+    });
+  });
+})();
